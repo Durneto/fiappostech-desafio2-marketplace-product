@@ -1,0 +1,64 @@
+# Arquivos de compilação gerados
+bin/
+obj/
+
+# Arquivos de dependências do NuGet
+*.dll
+*.exe
+*.pdb
+*.lock.json
+*.json
+
+# Diretórios específicos do Visual Studio
+.vscode/
+.vs/
+/.vs/
+*/bin/
+*/obj/
+*.user
+*.suo
+*.cache
+*.log
+*.vspscc
+*.vssscc
+*.pidb
+*.ide
+
+# Outros arquivos e diretórios gerados
+_UpgradeReport_Files/
+Backup*/
+[Tt]emp/
+[Dd]ebug/
+[Rr]elease/
+_ReSharper*/
+_ReSharper*/
+*.resharper.user
+*.resharper
+*.suo
+*.user
+*.docstates
+
+# Ferramentas de construção
+node_modules/
+bower_components/
+
+# Arquivos de log e rastreamento
+logs/
+*.log
+
+# Arquivos de configuração de aplicativos
+*.config
+
+# Arquivos de depuração do Windows
+[Tt]humbs.db
+ehthumbs.db
+
+# Arquivos de configuração de IDE
+*.sln.iml
+*.ipr
+*.iws
+
+# Cache de análise do Roslyn
+*.ide
+*.suo
+*.sln.docstates
