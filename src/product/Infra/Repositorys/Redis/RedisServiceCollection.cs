@@ -1,7 +1,4 @@
-﻿using ProductApi.Infra.Repositorys.Base;
-using StackExchange.Redis;
-using System.Data;
-using System.Data.SqlClient;
+﻿using StackExchange.Redis;
 
 namespace ProductApi.Infra.Repositorys.Redis
 {
@@ -9,12 +6,8 @@ namespace ProductApi.Infra.Repositorys.Redis
     {
         public static void AddRedis(this IServiceCollection services, IConfiguration configuration)
         {
-            var stringConexao = configuration.GetValue<string>("ConnectionStringSQL");
-            services.AddScoped<IDbConnection>((conexao) => new SqlConnection(stringConexao));
-            services.AddScoped<IUow, Uow>();
-
-            string redisHost = "localhost";
-            string redisPort = "6379";
+            string redisHost = configuration["RedisHost"];
+            string redisPort = configuration["RedisPort"];
             string connectionString = $"{redisHost}:{redisPort}";
             services.AddSingleton<IConnectionMultiplexer>(ConnectionMultiplexer.Connect(connectionString));
 
